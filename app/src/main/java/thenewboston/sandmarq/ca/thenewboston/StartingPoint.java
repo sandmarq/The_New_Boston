@@ -1,17 +1,48 @@
 package thenewboston.sandmarq.ca.thenewboston;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class StartingPoint extends ActionBarActivity {
+
+    int counter;
+    String msg;
+    Button add, sub;
+    TextView display;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting_point);
+        counter = 0;
+        msg = getResources().getString(R.string.tvDisplay);
+
+        add = (Button) findViewById(R.id.bAdd);
+        sub = (Button) findViewById(R.id.bSub);
+        display = (TextView) findViewById(R.id.tvDisplay);
+        display.setText( msg + " " + counter);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter++;
+                display.setText(msg + " " + counter);
+            }
+        });
+
+        sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                counter--;
+                display.setText(msg + " " + counter);
+            }
+        });
     }
 
 

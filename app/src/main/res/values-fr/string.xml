@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">The New Boston</string>
+    <string name="tvDisplay">Votre total est </string>
+    <string name="action_settings">Propriétés</string>
+    <string name="bAdd">Ajouter un</string>
+    <string name="bSub">Soustraire un</string>
+
+</resources>
