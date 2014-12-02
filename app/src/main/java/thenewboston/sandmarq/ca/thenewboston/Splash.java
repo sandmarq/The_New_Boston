@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 
 /**
  * Created by SANDRINE.MARQUIS on 2014-11-27.
@@ -17,9 +18,9 @@ public class Splash extends Activity {
         super.onCreate(TravisLoveBacon);
         setContentView(R.layout.splash);
 
-        ourSong = MediaPlayer.create(Splash.this, R.raw.intro);
+        //ourSong = MediaPlayer.create(Splash.this, R.raw.intro);
 
-        ourSong.start();
+        //ourSong.start();
 
         Thread timer = new Thread(){
             @Override
@@ -27,7 +28,8 @@ public class Splash extends Activity {
                 try{
                     sleep(3000);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
+                    Log.e("TAG", "Tried to open Menu");
                 } finally {
                     Intent openStartingPoint = new Intent("android.intent.action.MENU");
                     startActivity(openStartingPoint);
@@ -40,7 +42,7 @@ public class Splash extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        ourSong.release();
+//        ourSong.release();
         finish();
     }
 }

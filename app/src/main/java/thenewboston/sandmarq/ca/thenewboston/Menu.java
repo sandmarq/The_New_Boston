@@ -3,6 +3,7 @@ package thenewboston.sandmarq.ca.thenewboston;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -30,7 +31,8 @@ public class Menu extends ListActivity {
             Intent ourIntent = new Intent(Menu.this, ourClass);
             startActivity(ourIntent);
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
+            Log.e("TAG", "Tried to open " + cheese);
         }
 
     }
