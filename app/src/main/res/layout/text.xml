@@ -9,7 +9,7 @@
         android:id="@+id/etCommands"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Type a command"
+        android:hint="@string/txETCommand"
         android:password="true" />
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="20"
-            android:text="Try Command" />
+            android:text="@string/txBResults" />
 
         <ToggleButton
             android:id="@+id/tbPassword"
@@ -40,7 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Invalid" />
+        android:text="@string/txTVResults" />
 
 
 </LinearLayout>

@@ -6,5 +6,9 @@
     <string name="action_settings">Settings</string>
     <string name="bAdd">Add one</string>
     <string name="bSub">Subtract one</string>
+    <string name="txETCommand">Type a command</string>
+    <string name="txBResults">Try Command</string>
+    <string name="txTVResults">Invalid</string>
+
 
 </resources>

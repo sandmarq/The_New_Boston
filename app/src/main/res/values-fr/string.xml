@@ -6,5 +6,8 @@
     <string name="action_settings">Propriétés</string>
     <string name="bAdd">Ajouter un</string>
     <string name="bSub">Soustraire un</string>
+    <string name="txETCommand">Écrire une commande</string>
+    <string name="txBResults">Essayer la commande</string>
+    <string name="txTVResults">Invalide</string>
 
 </resources>
