@@ -18,15 +18,17 @@ import java.util.Random;
  */
 public class TextPlay extends Activity {
 
+    Button chkCmd;
+    ToggleButton passTog;
+    EditText input;
+    TextView display;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text);
 
-        Button chkCmd = (Button) findViewById(R.id.bResults);
-        final ToggleButton passTog = (ToggleButton) findViewById(R.id.tbPassword);
-        final EditText input = (EditText) findViewById(R.id.etCommands);
-        final TextView display = (TextView) findViewById(R.id.tvResults);
+        Initialize();
 
         passTog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,12 +70,19 @@ public class TextPlay extends Activity {
                             break;
                     }
                 } else {
-                    display.setText(R.string.tvDisplay);
+                    display.setText(R.string.txTVResults);
                     display.setGravity(Gravity.CENTER);
                     display.setTextColor(Color.BLACK);
                 }
             }
         });
 
+    }
+
+    private void Initialize() {
+        chkCmd = (Button) findViewById(R.id.bResults);
+        passTog = (ToggleButton) findViewById(R.id.tbPassword);
+        input = (EditText) findViewById(R.id.etCommands);
+        display = (TextView) findViewById(R.id.tvResults);
     }
 }
