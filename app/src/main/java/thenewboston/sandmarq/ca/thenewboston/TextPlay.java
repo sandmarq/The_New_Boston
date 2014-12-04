@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import java.util.Random;
+
 /**
  * Created by sandrine on 2014-12-02.
  */
@@ -50,7 +52,10 @@ public class TextPlay extends Activity {
                 } else if (check.contentEquals("blue")) {
                     display.setTextColor(Color.BLUE);
                 } else if (check.contentEquals("WTF")) {
-
+                    Random crazy = new Random();
+                    display.setText("WTF!!!!");
+                    display.setTextSize(crazy.nextInt(75));
+                    display.setTextColor(Color.rgb(crazy.nextInt(265),crazy.nextInt(265),crazy.nextInt(265)));
                 } else {
                     display.setText(R.string.tvDisplay);
                     display.setGravity(Gravity.CENTER);
