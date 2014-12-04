@@ -16,7 +16,7 @@ import java.util.Random;
 /**
  * Created by sandrine on 2014-12-02.
  */
-public class TextPlay extends Activity {
+public class TextPlay extends Activity implements View.OnClickListener {
 
     Button chkCmd;
     ToggleButton passTog;
@@ -29,21 +29,22 @@ public class TextPlay extends Activity {
         setContentView(R.layout.text);
 
         Initialize();
+        passTog.setOnClickListener(this);
+        chkCmd.setOnClickListener(this);
 
-        passTog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (passTog.isChecked()) {
-                    input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                } else {
-                    input.setInputType(InputType.TYPE_CLASS_TEXT);
-                }
-            }
-        });
+    }
 
-        chkCmd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    private void Initialize() {
+        chkCmd = (Button) findViewById(R.id.bResults);
+        passTog = (ToggleButton) findViewById(R.id.tbPassword);
+        input = (EditText) findViewById(R.id.etCommands);
+        display = (TextView) findViewById(R.id.tvResults);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bResults:
                 String check = input.getText().toString();
                 if (check.contentEquals("left")) {
                     display.setGravity(Gravity.LEFT);
@@ -57,8 +58,8 @@ public class TextPlay extends Activity {
                     Random crazy = new Random();
                     display.setText("WTF!!!!");
                     display.setTextSize(crazy.nextInt(75));
-                    display.setTextColor(Color.rgb(crazy.nextInt(265),crazy.nextInt(265),crazy.nextInt(265)));
-                    switch(crazy.nextInt(3)){
+                    display.setTextColor(Color.rgb(crazy.nextInt(265), crazy.nextInt(265), crazy.nextInt(265)));
+                    switch (crazy.nextInt(3)) {
                         case 0:
                             display.setGravity(Gravity.LEFT);
                             break;
@@ -74,15 +75,14 @@ public class TextPlay extends Activity {
                     display.setGravity(Gravity.CENTER);
                     display.setTextColor(Color.BLACK);
                 }
-            }
-        });
-
-    }
-
-    private void Initialize() {
-        chkCmd = (Button) findViewById(R.id.bResults);
-        passTog = (ToggleButton) findViewById(R.id.tbPassword);
-        input = (EditText) findViewById(R.id.etCommands);
-        display = (TextView) findViewById(R.id.tvResults);
+                break;
+            case R.id.tbPassword:
+                if (passTog.isChecked()) {
+                    input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                } else {
+                    input.setInputType(InputType.TYPE_CLASS_TEXT);
+                }
+                break;
+        }
     }
 }
