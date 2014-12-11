@@ -2,6 +2,7 @@ package thenewboston.sandmarq.ca.thenewboston;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -19,6 +20,7 @@ public class Camera extends Activity implements View.OnClickListener {
     ImageView iv;
     Intent i;
     final static int camaraData = 0;
+    Bitmap bmp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,5 +51,15 @@ public class Camera extends Activity implements View.OnClickListener {
                 break;
         }
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            bmp = (Bitmap) extras.get("data");
+            iv.setImageBitmap(bmp);
+        }
     }
 }
