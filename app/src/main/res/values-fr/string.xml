@@ -10,5 +10,21 @@
     <string name="txBResults">Essayer la commande</string>
     <string name="txTVResults">Invalide</string>
 	<string name="tvEmailaddr">"Adresse(s) email(s):"</string>
+    <string name="tvIntro">Intro haineuse :</string>
+    <string name="tvPName">Nom de la personne :</string>
+    <string name="tvStupid">Chose stupide que la personne fait :</string>
+    <string name="tvOrder">Ce que tu veux faire a cette persone :</string>
+    <string name="tvOutRo">Fin haineuse :</string>
+    <string name="bSend">Envoyer Email</string>
+
+    <string-array name="saMsg">
+        <item>Bon Allo</item>
+        <item>Je veux juste te dire</item>
+        <item>.  Pas seulement ça mais je te hais</item>
+        <item>, cela me rend folle.  Je veux juste te mettre</item>
+        <item>.  Eh, c'est tout ce que je veux discuter avec toi, oh et</item>
+        <item>.  Oh aussi si tu t'ennuis tu peux toujours aller sur www.sandmarq.ca</item>
+        <item>PS. Je crois que je t'aime...</item>
+    </string-array>
 
 </resources>

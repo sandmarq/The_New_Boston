@@ -2,6 +2,7 @@ package thenewboston.sandmarq.ca.thenewboston;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,20 +37,23 @@ public class Email extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         // TODO Auto-generated method stub
 
+        Resources res = getResources();
+        String[] msg = res.getStringArray(R.array.saMsg);
+
         convertEditTextVarsIntoStringsAndYesThisIsAMethodWeCreated();
         String emailaddress[] = { emailAdd };
-        String message = "Well hello "
+        String message = msg[0].toString() + " "
                 + name
-                + " I just wanted to say "
+                + " " + msg[1].toString() + " "
                 + beginning
-                + ".  Not only that but I hate when you "
+                + msg[2].toString() + " "
                 + stupidAction
-                + ", that just really makes me crazy.  I just want to make you "
+                + msg[3].toString() + " "
                 + hatefulAct
-                + ".  Welp, thats all I wanted to chit-chatter about, oh and"
+                + msg[4].toString() + " "
                 + out
-                + ".  Oh also if you get bored you should check out www.mybringback.com"
-                + '\n' + "PS. I think I love you...    ";
+                + msg[5].toString()
+                + '\n' + msg[6].toString();
 
         Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
         emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, emailaddress);

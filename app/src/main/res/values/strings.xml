@@ -9,8 +9,24 @@
     <string name="txETCommand">Type a command</string>
     <string name="txBResults">Try Command</string>
     <string name="txTVResults">Invalid</string>
-	<string name="tvEmailaddr">"Email address(es):"</string>
-	
+    <string name="tvEmailaddr">"Email address(es):"</string>
+    <string name="tvIntro">Hateful Intro :</string>
+    <string name="tvPName">Person's name :</string>
+    <string name="tvStupid">Stupid Things that this Person does :</string>
+    <string name="tvOrder">What you want to do to this person :</string>
+    <string name="tvOutRo">Hateful Outro :</string>
+    <string name="bSend">Send Emai</string>
+
+    <string-array name="saMsg">
+        <item>Well hello</item>
+        <item>I just wanted to say</item>
+        <item>.  Not only that but I hate when you</item>
+        <item>, that just really makes me crazy.  I just want to make you</item>
+        <item>.  Welp, thats all I wanted to chit-chatter about, oh and</item>
+        <item>.  Oh also if you get bored you should check out www.sandmarq.ca</item>
+        <item>PS. I think I love you...</item>
+    </string-array>
+
 
 
 </resources>

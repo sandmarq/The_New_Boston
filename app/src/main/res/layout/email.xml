@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hateful Intro:"></TextView>
+                android:text="@string/tvIntro"></TextView>
 
             <EditText
                 android:id="@+id/etIntro"
@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Person's name"></TextView>
+                android:text="@string/tvPName"></TextView>
 
             <EditText
                 android:id="@+id/etName"
@@ -48,7 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stupid Things that this Person does"></TextView>
+                android:text="@string/tvStupid"></TextView>
 
             <EditText
                 android:id="@+id/etThings"
@@ -58,7 +58,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="What you want to do to this person:"></TextView>
+                android:text="@string/tvOrder"></TextView>
 
             <EditText
                 android:id="@+id/etAction"
@@ -68,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hateful Outro"></TextView>
+                android:text="@string/tvOutRo"></TextView>
 
             <EditText
                 android:id="@+id/etOutro"
@@ -87,6 +87,6 @@
             android:id="@+id/bSentEmail"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="Send Email"></Button>
+            android:text="@string/bSend"></Button>
     </LinearLayout>
 </LinearLayout>
