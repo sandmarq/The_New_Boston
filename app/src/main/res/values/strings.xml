@@ -9,6 +9,8 @@
     <string name="txETCommand">Type a command</string>
     <string name="txBResults">Try Command</string>
     <string name="txTVResults">Invalid</string>
+	<string name="tvEmailaddr">"Email address(es):"</string>
+	
 
 
 </resources>
