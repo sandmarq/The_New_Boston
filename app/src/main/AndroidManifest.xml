@@ -38,6 +38,10 @@
             android:name="thenewboston.sandmarq.ca.thenewboston.TextPlay"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="thenewboston.sandmarq.ca.thenewboston.Email"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
