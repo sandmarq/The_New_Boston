@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import java.io.IOException;
+
 /**
  * Created by SANDRINE.MARQUIS on 2014-12-11.
  */
@@ -43,7 +45,11 @@ public class Camera extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bSetWallpaper:
-
+                try {
+                    getApplicationContext().setWallpaper(bmp);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             case R.id.ibTakePic:
                 i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
