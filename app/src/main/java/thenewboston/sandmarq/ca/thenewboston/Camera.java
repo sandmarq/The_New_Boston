@@ -3,6 +3,8 @@ package thenewboston.sandmarq.ca.thenewboston;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Created by SANDRINE.MARQUIS on 2014-12-11.
@@ -29,7 +32,7 @@ public class Camera extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.photo);
         initialize();
-
+        bmp = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
     }
 
     private void initialize() {
